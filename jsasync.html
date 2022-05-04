@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <script>
+        function display1(text1){
+            document.getElementById("display").innerHTML=text1;
+        }
+        function first(){
+            display1("prepare tea");
+        };
+
+        function second(){
+            document.write('<button type="button" onclick="first()">click me</button>');
+            display1("heating milk");
+        }
+        second();
+    </script>
+</body>
+</html>

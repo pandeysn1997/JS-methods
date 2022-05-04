@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="display"></p>
+    <script>
+        function displayer(value) {
+            document.getElementById("display").innerHTML=value;
+
+        } 
+        let myPromise=new Promise(function(myResolve,myReject) {
+            let request1 = new XMLHttpRequest();
+            request1.open('GET', "ajax.txt");
+            request1.onload = function () {
+                if (request1.status == 200) {
+                    myResolve(this.responseText);
+
+                } else {
+                   myReject("error:" + request1.status);
+                }
+            };
+            request1.send();
+        });
+
+       myPromise.then(
+           function(value){
+               displayer(value);},
+               function(error){
+                   displayer(error);}
+               
+           
+       );
+    </script>
+    
+  
+</body>
+
+</html>
