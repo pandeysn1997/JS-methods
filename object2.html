@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="classmarks"></p>
+    <p id="classmarks1"></p>
+        <script>
+            const classmarks={
+                firstname : "Ravi",
+                Percentage : "98%",
+                firstname1 : "Mukul",
+                Percentage1 : "68%",
+                firstname2 : "Sahil",
+                Percentage2 : "50%",
+                firstname3 : "Vishal",
+                Percentage3 : "93%",
+                firstname4 : "Prateek",
+                Percentage4 : "56%",
+                firstname5 : "Rajat",
+                Percentage5 : "62%",
+                verygood: function()
+            {
+                return this.firstname +"  "+ this.Percentage+ " " + this.firstname3 +" " + this.Percentage3;
+               
+            
+                 
+                
+            },
+            average : function()
+            {
+
+            return this.firstname1 +" " + this.Percentage1 + " "+ this.firstname5 +" " + this.Percentage5;
+            
+
+            },
+
+            verybad: function()
+            {
+                return this.firstname4 +" " + this.Percentage4 +" " + this.firstname2 +" " + this.Percentage2;
+        
+           
+            }
+
+
+         };
+        // document.getElementById("classmarks").innerHTML= classmarks.firstname2 + " " + classmarks.Percentage2;
+       // document.getElementById("classmarks1").innerHTML= classmarks.firstname1 + " " + classtmarks.Percentage1;
+        document.getElementById("classmarks").innerHTML= classmarks.verygood();
+        </script>
+    </p>
+</body>
+</html>
